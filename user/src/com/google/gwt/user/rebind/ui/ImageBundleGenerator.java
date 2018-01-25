@@ -315,7 +315,7 @@ public class ImageBundleGenerator extends Generator {
       // Emit a constant for the composite URL. Note that we prepend the
       // module's base URL so that the module can reference its own resources
       // independently of the host HTML page.
-      sw.print("private static final String IMAGE_BUNDLE_URL = GWT.getModuleBaseURL() + \"");
+      sw.print("private static final String IMAGE_BUNDLE_URL = GWT.getModuleBaseForStaticFiles() + \"");
       sw.print(escape(bundledImageUrl));
       sw.println("\";");
 
